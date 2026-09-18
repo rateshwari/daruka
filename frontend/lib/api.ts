@@ -1,7 +1,6 @@
 import { SystemResponse } from "./types";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:8000";
-
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "https://darukaa-api-yml0.onrender.com";
 export async function converse(sessionId: string, message: string): Promise<SystemResponse> {
   const res = await fetch(`${API_BASE}/converse`, {
     method: "POST",
